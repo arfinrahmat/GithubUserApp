@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".DetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/circle_background"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_detail_photo"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="2dp"
+                android:layout_marginTop="54dp"
+                android:layout_gravity="center_horizontal"
+                tools:src="@android:color/darker_gray"/>
+
+            <TextView
+                android:id="@+id/tv_name_detail_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="@string/name"
+                android:layout_below="@id/img_detail_photo"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="22dp"/>
+
+            <TextView
+                android:id="@+id/tv_detail_company"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                tools:text="@string/company"
+                android:layout_gravity="center_horizontal"/>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="15dp">
+
+                <TableRow
+                    android:gravity="center">
+                    <ImageView
+                        android:id="@+id/img_followers_photo"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/followers"/>
+
+                    <TextView
+                        android:id="@+id/tv_followers_photo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="14dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="10sp"
+                        tools:text="@string/followers" />
+
+                    <ImageView
+                        android:id="@+id/img_following_photo"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/following"/>
+
+                    <TextView
+                        android:id="@+id/tv_following_photo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="14dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="10sp"
+                        tools:text="@string/following" />
+
+                    <ImageView
+                        android:id="@+id/img_repo_photo"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/repository"/>
+
+                    <TextView
+                        android:id="@+id/tv_repo_photo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="14dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="10sp"
+                        tools:text="@string/repo" />
+                </TableRow>
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="15dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_follow"
+                    android:layout_width="130dp"
+                    android:background="@drawable/button_rounded"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="@string/follow"/>
+
+                <Button
+                    android:id="@+id/btn_contact"
+                    android:layout_width="130dp"
+                    android:background="@drawable/button_rounded"
+                    android:textSize="12sp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/contact"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/btn_my_details"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                tools:text="@string/my_details"
+                style="?android:attr/borderlessButtonStyle"/>
+
+            <Button
+                android:id="@+id/btn_portfolio"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                tools:text="@string/portfolio"
+                style="?android:attr/borderlessButtonStyle"/>
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>
